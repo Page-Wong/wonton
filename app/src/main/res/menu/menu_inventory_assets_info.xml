@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="0"
+        android:title="查找"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="删除" />
+    <item
+        android:id="@+id/action_save"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="保存"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_print"
+        android:icon="@drawable/print_24px"
+        android:title="打印"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_print_space"
+        android:icon="@android:drawable/btn_default_small"
+        android:title="打印空行" />
+</menu>

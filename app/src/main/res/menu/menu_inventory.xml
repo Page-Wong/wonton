@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_reflash"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:title="刷新"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_sysn_assets"
+        android:icon="@android:drawable/stat_sys_download"
+        android:orderInCategory="1"
+        android:title="下载"
+        app:showAsAction="always" />
+</menu>

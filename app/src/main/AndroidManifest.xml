@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lsinfo.wonton">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".ui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 盘点操作主界面 -->
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".ui.InventoryActivity"
+            android:label="@string/title_activity_inventory"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- 资产信息界面 -->
+        <activity
+            android:name=".ui.InventoryInfoActivity"
+            android:label="@string/title_activity_inventory_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- 资产列表界面 -->
+        <activity
+            android:name=".ui.InventoryListActivity"
+            android:label="@string/title_activity_inventory_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- 盘点计划界面 -->
+        <activity
+            android:name=".ui.InventoryPlanActivity"
+            android:label="@string/title_activity_inventory_plan"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- PDA3506扫描服务 -->
+        <service android:name=".service.Pda3506ScanService" />
+
+    </application>
+
+</manifest>
